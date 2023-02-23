@@ -1,0 +1,231 @@
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .content {
+    margin: 30;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabla-2{
+    background-color: rgb(255, 255, 255);
+    border-color: #000000;
+  }
+
+  .mt-4 {
+    background-color: rgb(255, 255, 255);
+    padding-left:  20px;
+    padding-right: 20px;
+    margin-left:   20px;
+    margin-right:  20px;
+    padding-top:  20px;
+    padding-block: 20px;
+    margin-top:   20px;
+    margin-block:  20px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  /* .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  } */
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #005dca;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  /* Responsive Styles */
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .row .col {
+    flex: 1;
+  }
+
+  .row .col:last-child {
+    margin-left: 1em;
+  }
+
+  /* Accordion styles */
+  .tabs {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.5);
+    width: 100%;
+  }
+
+  .tab {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+  }
+
+  .tab-label:hover {
+    background: #005dca;
+    color: white;
+  }
+
+  .tab-label::after {
+    content: "❯";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+    color: white;
+  }
+
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    transition: all 0.35s;
+  }
+
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+  }
+
+  input:checked+.tab-label {
+    background: #007df2;
+    color: white;
+  }
+
+  input:checked+.tab-label::after {
+    transform: rotate(90deg);
+  }
+
+  input:checked~.tab-content {
+    max-height: 400vh;
+    padding: 1em;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .thead-blue {
+    background-color: #005dca;
+    color: white;
+  }

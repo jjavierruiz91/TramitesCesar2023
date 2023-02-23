@@ -1,0 +1,138 @@
+
+<app-menu-asuntos-internos></app-menu-asuntos-internos>
+
+<body id="top">
+    <!--  -->
+   <br>
+    <!-- Fin del titulo del aplicativo -->
+    <div class="minimo">
+        <div class="container">
+            <!-- Panel de Información inicio -->
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="card p-2 border-info">
+                        <div class="row align-items-center">
+                            <div class="col-2 text-center"><i class="fa fa-chart-pie fa-3x "
+                                    style="color: #3c3f8d"></i></div>
+
+                            <div class="col-10 border-left border-info">
+                                <span id="contenido_Label11" class="titulo_banner">REPORTE  DE LOS TRAMITES </span>
+                                <br><br>
+                                <label class=""><i class="fa fa-exclamation-circle fa-1x "
+                                        style="color: #3c3f8d"></i>&nbsp; Informacion general de los tramites realizados en la
+                                        secretaria de Gobierno Departamental</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+            <div id="contenido_Box1" class="row mt-3">
+                <div class="col-12">
+                    <span id="contenido_Label6" class="text-primary h5">SECRETARIA DE GOBIERNO </span>
+                    <hr>
+                </div>
+            </div>
+           
+            
+            <div class="row">
+                <div class="col-12">
+                    <div style="overflow-x: auto;">
+                        <table cellspacing="0" rules="all"
+                            class="table colorBlanco table-striped table-hover table-bordered" id="contenido_DOCUMENTOS"
+                            style="border-collapse:collapse;">
+                            <tbody>
+      
+                                <tr>
+                                    
+                                    <th class="text-center" scope="col" style="width:40%;">Tramite</th>
+                                    
+                                    <th class="text-center"  scope="col" style="width:15%; color: #5b7cb6;">Realizados</th>
+                                    <th class="text-center" scope="col" style="width:15%;color: #28a745;">Finalizados</th>
+                                    <th class="text-center" scope="col" style="width:15%;color: darkorange;">En proceso</th>
+                                    <th class="text-center" scope="col" style="width:15%;color: firebrick;">Certificados</th>
+                                    
+
+                                </tr>
+                            
+                                <p></p>
+                                <tr>
+                                    <th style="text-align: justify">Certificación de la personería juridica y representación legal de organizaciones comunales</th>
+                                    <th class="text-center">{{realizados6}}</th>
+                                    <th class="text-center">{{finalizados6}} </th>
+                                    <th class="text-center">{{en_proceso6}} </th>
+                                    <th class="text-center">{{certificado6}} </th>
+                                   
+    
+    
+    
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Reconocimiento de la Personería juridica de los organismos de acción comunal</th>
+                                    <th class="text-center">{{realizados7}}</th>
+                                    <th class="text-center">{{finalizados7}}</th>
+                                    <th class="text-center">{{en_proceso7}}</th>
+                                    <th class="text-center">{{certificado7}}</th>
+                                  
+    
+    
+    
+    
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Cancelación de la Personeria juridica de las organizaciones comunales</th>
+                                    <th class="text-center">{{realizados8}}</th>
+                                    <th class="text-center">{{finalizados8}}</th>
+                                    <th class="text-center">{{en_proceso8}}</th>
+                                    <th class="text-center">{{certificado8}}</th>
+                                    
+    
+                                    
+    
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Inscripcón o reforma de estatutos de las organizaciones comunales</th>
+                                    <th class="text-center">{{realizados9}}</th>
+                                    <th class="text-center">{{finalizados9}}</th>
+                                    <th class="text-center">{{en_proceso9}}</th>
+                                    <th class="text-center">{{certificado9}}</th>
+                                    
+    
+    
+    
+    
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Inscripción de dignatarios de las orgnizaciones comunales </th>
+                                    <th class="text-center">{{realizados10}}</th>
+                                    <th class="text-center">{{finalizados10}}</th>
+                                    <th class="text-center">{{en_proceso10}}</th>
+                                    <th class="text-center">{{certificado10}}</th>
+                                    
+                                </tr>  
+                            
+                            </tbody>
+
+                        </table>
+                        <div class="input-group mb-3">
+                            <div class="form-group center" style="width:100%; height:100%">
+                                <button (click)="cancelar()" class="btn btn-primary" style='width:120px'>Atras</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            
+            
+            
+                             
+                        
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+
+</body>

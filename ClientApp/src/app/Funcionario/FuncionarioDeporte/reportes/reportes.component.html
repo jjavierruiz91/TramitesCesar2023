@@ -1,0 +1,286 @@
+<app-menu-funcionario></app-menu-funcionario>
+
+<body id="top">
+    <!--  -->
+   <br>
+    <!-- Fin del titulo del aplicativo -->
+    <div class="minimo">
+        <div class="container">
+            <!-- Panel de Información inicio -->
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="card p-2 border-info">
+                        <div class="row align-items-center">
+                            <div class="col-2 text-center"><i class="fa fa-chart-pie fa-3x "
+                                    style="color: #3c3f8d"></i></div>
+
+                            <div class="col-10 border-left border-info">
+                                <span id="contenido_Label11" class="titulo_banner">REPORTE GENERAL</span>
+                                <br><br>
+                                <label class=""><i class="fa fa-exclamation-circle fa-1x "
+                                        style="color: #3c3f8d"></i>&nbsp; Informacion general de los tramites realizados.</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+            <div class="row">
+                <div id="contenido_box_usuario_3" class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-datosPersonales o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-paste"></i>
+                            </div>
+                            <div class="mr-5"><strong>Tramites Realizados: {{total}}</strong></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                   <div id="contenido_box_usuario_2" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-solicitud o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                 <div class="mr-5"><strong>Tramites Finalizados: {{finalizados}}</strong></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+                    <div id="contenido_box_usuario_1" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-reportes o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                 <div class="mr-5"><strong>Tramites En Proceso: {{en_proceso}}</strong></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div id="contenido_box_usuario_1" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-certificados o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                 <div class="mr-5"><strong>Certificados Expedidos: {{finalizados}}</strong></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+             </div>
+             <div id="contenido_Box1" class="row mt-3">
+                <div class="col-12">
+                    <span id="contenido_Label6" class="text-primary h5">Reporte de Clubes</span>
+                    <hr>
+                </div>
+                </div>
+                <div class="row">
+                    <div id="contenido_box_usuario_3" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-datosPersonales o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-paste"></i>
+                                </div>
+                                <div class="mr-5"><strong>Tramites Realizados: {{total_clubes}}</strong></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                       <div id="contenido_box_usuario_2" class="col-xl-3 col-sm-6 mb-3">
+                            <div class="card text-white bg-solicitud o-hidden h-100">
+                                <div class="card-body">
+                                    <div class="card-body-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </div>
+                                     <div class="mr-5"><strong>Tramites Finalizados: {{finalizados_clubes}}</strong></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+            
+                        <div id="contenido_box_usuario_1" class="col-xl-3 col-sm-6 mb-3">
+                            <div class="card text-white bg-reportes o-hidden h-100">
+                                <div class="card-body">
+                                    <div class="card-body-icon">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                     <div class="mr-5"><strong>Tramites En Proceso: {{en_proceso_clubes}}</strong></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div id="contenido_box_usuario_1" class="col-xl-3 col-sm-6 mb-3">
+                            <div class="card text-white bg-certificados o-hidden h-100">
+                                <div class="card-body">
+                                    <div class="card-body-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                     <div class="mr-5"><strong>Certificados Expedidos: {{certificados_clubes}}</strong></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        
+                 </div>
+            <div id="contenido_Box1" class="row mt-3">
+                <div class="col-12">
+                    <span id="contenido_Label6" class="text-primary h5">Reporte de Ligas</span>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div id="contenido_box_usuario_3" class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-datosPersonales o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-paste"></i>
+                            </div>
+                            <div class="mr-5"><strong>Tramites Realizados: {{total_ligas}}</strong></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                   <div id="contenido_box_usuario_2" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-solicitud o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                 <div class="mr-5"><strong>Tramites Finalizados: {{finalizados_ligas}}</strong></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+                    <div id="contenido_box_usuario_1" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-reportes o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                 <div class="mr-5"><strong>Tramites En Proceso: {{en_proceso_ligas}}</strong></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div id="contenido_box_usuario_1" class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-certificados o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                 <div class="mr-5"><strong>Certificados Expedidos: {{certificados_ligas}}</strong></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                   
+             </div>
+            <div id="contenido_Box1" class="row mt-3">
+                <div class="col-12">
+                    <span id="contenido_Label6" class="text-primary h5">Reporte de Tramites</span>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div style="overflow-x: auto;">
+                        <table cellspacing="0" rules="all"
+                            class="table colorBlanco table-striped table-hover table-bordered" id="contenido_DOCUMENTOS"
+                            style="border-collapse:collapse;">
+                            <tbody>
+      
+                                <tr>
+                                    
+                                    <th class="text-center" scope="col" style="width:40%;">Tramite</th>
+                                    
+                                    <th class="text-center"  scope="col" style="width:15%; color: #5b7cb6;">Realizados</th>
+                                    <th class="text-center" scope="col" style="width:15%;color: #28a745;">Finalizados</th>
+                                    <th class="text-center" scope="col" style="width:15%;color: darkorange;">En proceso</th>
+                                    <th class="text-center" scope="col" style="width:15%;color: firebrick;">Certificados</th>
+
+                                    
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Personería Jurídica de organismos deportivos y recreativos</th>
+                                    <th class="text-center">{{realizados1}}</th>
+                                    <th class="text-center">{{finalizados1}}</th>
+                                    <th class="text-center">{{en_proceso1}}</th>
+                                    <th class="text-center">{{certificado1}}</th>
+                                   
+
+
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Inscripción de dignatarios de los organismos deportivos y recreativos</th>
+                                    <th class="text-center">{{realizados2}}</th>
+                                    <th class="text-center">{{finalizados2}}</th>
+                                    <th class="text-center">{{en_proceso2}}</th>
+                                    <th class="text-center">{{certificado2}}</th>
+                                  
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Aprobación de reformas estatutarias</th>
+                                    <th class="text-center">{{realizados3}}</th>
+                                    <th class="text-center">{{finalizados3}}</th>
+                                    <th class="text-center">{{en_proceso3}}</th>
+                                    <th class="text-center">{{certificado3}}</th>
+                                    
+
+                                    
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Cancelación de Personería Jurídica</th>
+                                    <th class="text-center">{{realizados4}}</th>
+                                    <th class="text-center">{{finalizados4}}</th>
+                                    <th class="text-center">{{en_proceso4}}</th>
+                                    <th class="text-center">{{certificado4}}</th>
+                                    
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align: justify">Certificación de existencia y representación legal</th>
+                                    <th class="text-center">{{realizados5}}</th>
+                                    <th class="text-center">{{finalizados5}}</th>
+                                    <th class="text-center">{{en_proceso5}}</th>
+                                    <th class="text-center">{{certificado5}}</th>
+                                    
+
+
+
+
+                                </tr>
+      
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+           
+
+            
+        </div>
+    </div>
+    <br>
+
+
+</body>

@@ -1,0 +1,81 @@
+<!-- <app-menu></app-menu> -->
+<!-- target="_blank" para que el enlace se abran en una nueva pestaña-->
+<app-menusesion></app-menusesion>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tramites</title>
+</head>
+
+<body>
+    <div class="col-xs-12  col-md-12 col-lg-12 col-xl-12">
+        <div class="resultadosBusqueda">
+            <div class="row">
+                <div class="titulo-de-tramites">
+                    <p class="tramites"> Trámites</p>
+                </div>
+
+                <div class="box">
+                    <div class="container-1">
+                        <span class="icon"><i class="fa fa-search fa-6"></i></span>
+                        <input type="search" id="search" [(ngModel)]="filterPost" placeholder="Buscar Tramite..." />
+                    </div>
+                </div>
+
+                <div class="contenedor-tramites-g col-xl-12">
+                    <div class="contenedor-tramites">
+
+                        <tr *ngFor="let tramite of listaTramites | filtroTramites:filterPost" class="row mt-4">
+
+                            <div class="contenedor-tramite col-lg-9">
+                                <span class="titulo-entidad-detalle">
+
+                                 <a class="mx-auto" href="{{tramite.url}}vista"> 
+                                         <h3 class="titulo-tramite">{{tramite.nombre}}  </h3> 
+                                </a>
+
+                                </span>
+                                <div class="contendor-descripcion mt-2">{{tramite.descripcion}}
+                                </div>
+                                <span class="titulo-entidad">Realizar Tramite:<a  href="{{tramite.url}}Selection/{{tramite.codtramite}}">
+                                        <span class="titulo-entidad-detalle">Click aquí</span>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="col info-tramite align-self-end">
+
+                                <div class="col">
+                                    <span class="ico-tramite-linea">
+                                        <span class="text-tramites-linea m-4">{{tramite.modalidad}}</span>
+                                    </span>
+                                </div>
+
+                                <div class="col">
+                                    <span class="ico-tramite-con-costo">
+                                        <span class="text-tramites m-4">{{tramite.costo}}</span>
+                                    </span>
+                                </div>
+
+                                <div class="col">
+                                    <span class="ico-tiempo">
+                                        <span class="text-tramites m-4">Duración {{tramite.duracion}} días
+                                            hábiles</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+                <div class="input-group mb-3 " >
+                    <div class="form-group center" style="width:100%; height:100%">
+                        <button (click)="cancelar()" class="btn btn-primary" style='width:120px'>Atras</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

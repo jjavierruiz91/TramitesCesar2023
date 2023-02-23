@@ -1,0 +1,71 @@
+<app-menu-funcionario></app-menu-funcionario>
+<!DOCTYPE html>
+<!-- utilizara la ultima version de html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Solicitudes</title>
+</head>
+
+<body>
+    <div class="col-xs-12  col-md-12 col-lg-12 col-xl-12">
+        <div class="resultadosBusqueda">
+
+            <div class="row">
+
+                <div class="titulo-de-tramites">
+                    <p class="tramites"> Lista de Solicitudes de tramite</p>
+                </div>
+
+                <!-- <div class="box">
+                    <div class="container-1">
+                        <span class="icon"><i class="fa fa-search fa-6"></i></span>
+                        <input  name="filtrarUser" type="search" placeholder="Buscar por nombre..."
+                            [(ngModel)]="filtrarUser" id="search"/>
+                    </div>
+                </div> -->
+
+                <div class="contenedor-tramites-g col-xl-12">
+                    <div class="contenedor-tramites">
+                        <table class="table table-striped table-hover" id="table_id"  style="background-color: #ffffff;" >
+                            <thead class="table" style="background-color: #4193f2;">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Identificación</th>
+                                    <th scope="col">Usuario</th>
+                                    <th scope="col">Sectorial</th>
+                                    <th scope="col">Tramite</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Fecha</th>
+                                    <th>Opcion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let solicitud of solicitudesPrueba; let i = index ">
+                                    <td>{{i+1}}</td>
+                                    <td>{{usuariosList[i]?.id}}</td>
+                                    <td>{{usuariosList[i]?.nombres}}</td>
+                                    <td>{{solicitud?.sectorial}}</td>
+                                    <td>{{tramitesList[i]?.nombre}}</td>
+                                    <td>{{solicitud?.tipoTramite}}</td>
+                                    <td >
+                                        <span
+                                            [style.color]="solicitud.estado == 'FINALIZADO'? '#28a745': solicitud.estado == 'EN PROCESO'? '#be9d16f3': 'red' ">
+                                            {{solicitud.estado}}
+                                        </span>
+                                    </td>
+                                    <td>{{solicitud?.fecha}}</td>
+                                    <td><a class="btn btn-primary" (click)="gestionar(solicitud.codstramite)" >Gestionar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

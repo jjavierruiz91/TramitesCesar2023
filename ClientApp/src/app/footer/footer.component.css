@@ -1,0 +1,30 @@
+element.style {
+    color: #000000;
+}
+a {
+    color: #0d3c61;
+}
+style attribute {
+    color: #000000;
+}
+style attribute {
+    text-align: center;
+}
+style attribute {
+    text-align: justify;
+}
+
+body {
+    margin: 20;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+}
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}

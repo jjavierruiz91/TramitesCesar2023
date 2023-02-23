@@ -1,0 +1,72 @@
+<app-menu></app-menu>
+<!DOCTYPE html>
+<!-- utilizara la ultima version de html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ingresar</title>
+</head>
+
+<body>
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-sm-8 rounded mx-auto bg-white">
+                <br>
+                <div class="form-group mb-3">
+                    <!-- Colocar margin top -->
+                    <img alt="" src="assets/Imagenes/lohacemos.png" width="100%">
+                </div>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+
+                    <div class="container1">
+                        <h3><strong>
+                                <span style="font-size:22px">Recupera tu cuenta</span>
+                            </strong></h3>
+
+                        <p><span style="font-size:18px">Ingresa tu correo electrónico para buscar tu cuenta.</span></p>
+
+                    </div>
+                    <div class="input-group mb-3">
+                        <!-- icono -->
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope fa-1x"
+                                    style="color: cornflowerblue"></i></span>
+                        </div>
+
+                        <input class="form-control" formControlName="correo"
+                            [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" placeholder="Correo Electrónico"
+                            type="text" name="correo" id="correo" size="25" maxlength="50" value="" aria-required="true"
+                            aria-invalid="true" style="cursor: pointer;">
+                        <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                            <div *ngIf="f.correo.errors.required">El campo es obligatorio</div>
+                            <div *ngIf="f.correo.errors.email">Correo inválido, (por ejemplo, nombre@ejemplo.com).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px" class="form-group">
+                        <div class="input-group mb-3">
+                            <input type="submit" name="ButtonLogin" value="Buscar" id="ButtonLogin"
+                                class="btn btn-block btn-primary">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="reset" (click)="goBack()" name="ButtonLogin" value="Cancelar" id="ButtonLogin"
+                                class="btn btn-block btn-secundary">
+                        </div>
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+</body>
+
+</html>

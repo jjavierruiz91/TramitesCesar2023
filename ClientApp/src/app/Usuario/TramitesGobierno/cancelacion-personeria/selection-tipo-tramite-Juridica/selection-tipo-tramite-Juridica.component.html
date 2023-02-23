@@ -1,0 +1,89 @@
+<app-menusesion></app-menusesion>
+
+<head>
+    <title>Tramites</title>
+</head>
+
+<body id="top">
+
+    <!--  -->
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="input-group mb-3">
+                    <span id="Label2" class="titulo_tipo_1">CANCELACIÓN DE PERSONERÍA JURÍDICA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin del titulo del aplicativo -->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+        <div class="minimo">
+
+            <div class="container">
+                <!-- Panel de Información inicio -->
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="card p-2 border-info">
+                            <div class="row align-items-center">
+                                <div class="col-2 text-center"><i class="fa fa-file-export fa-3x "
+                                        style="color: #3c3f8d"></i></div>
+
+                                <div class="col-10 border-left border-info">
+                                    <span id="contenido_Label11" class="titulo_banner">Información para la cancelacón de personeria juridica a los organismos comunales</span>
+                                    <br><br>
+                                    <label class=""><i class="fa fa-exclamation-circle fa-1x "
+                                            style="color: #3c3f8d"></i>&nbsp; Debe
+                                        cargar los documentos requeridos para el trámite.</label><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contenido_Box1" class="row mt-3">
+                    <div class="col-12">
+                        <span id="contenido_Label6" class="text-primary h5">Seleccione opcion del tramite </span>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <div class="form-group">
+                                <label>Tipo
+                                    de Tramite:*</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-fingerprint fa-1x"
+                                                style="color: cornflowerblue"></i></span>
+                                    </div>
+                                    <select class="form-control" formControlName="tipoTramite" [(ngModel)]="tipoTramite"
+                                        [ngClass]="{ 'is-invalid': submitted && f.tipoTramite.errors }"
+                                        name="tipoTramite" id="tipoUsuario">
+                                        <option value="" selected>--Seleccione--</option>
+                                       
+                                        <option value="PRIMER GRADO Y SEGUNDO GRADO">PRIMER GRADO Y SEGUNDO GRADO</option>
+                                    </select>
+                                    <div *ngIf="submitted && f.tipoTramite.errors" class="invalid-feedback">
+                                        <div *ngIf="f.tipoTramite.errors.required">El campo es obligatorio</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 10px" class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="submit" name="ButtonLogin" value="Siguiente" id="ButtonLogin"
+                                        class="btn btn-block btn-primary">
+                                </div>
+                                <br>
+                                <button (click)="cancelar()" type="reset" class="btn btn-primary" style='width:120px'>Atras</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+</body>

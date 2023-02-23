@@ -1,0 +1,212 @@
+<app-menuadminsesion></app-menuadminsesion>
+<!DOCTYPE html>
+<!-- utilizara la ultima version de html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-sm-8 rounded mx-auto bg-white">
+                <br>
+                <div class="form-group mb-3">
+                    <!-- Colocar margin top -->
+                    <img alt="" src="assets/Imagenes/lohacemos.png" width="100%">
+                </div>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+                    <div *ngIf="usuario">
+
+                        <legend class="txt-titulo">Gestionar Usuario Funcionario Gobierno</legend>
+                        <div class="form-group">
+                            <label for="nombre">Nombres:*</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <input class="form-control" formControlName="nombres" [(ngModel)]="usuario.nombres"
+                                    [ngClass]="{ 'is-invalid': submitted && f.nombres.errors }" placeholder="Nombres"
+                                    type="text" name="nombre" id="nombre" size="25" maxlength="100" value="">
+                                <div *ngIf="submitted && f.nombres.errors" class="invalid-feedback">
+                                    <div *ngIf="f.nombres.errors.required">El campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellidos:*</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <input class="form-control" formControlName="apellidos" [(ngModel)]="usuario.apellidos"
+                                    [ngClass]="{ 'is-invalid': submitted && f.apellidos.errors }"
+                                    placeholder="Apellidos" type="text" name="apellido" id="apellido" size="25"
+                                    maxlength="100" value="" style="cursor: pointer;">
+                                <div *ngIf="submitted && f.apellidos.errors" class="invalid-feedback">
+                                    <div *ngIf="f.apellidos.errors.required">El campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo
+                                identificación:*</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-fingerprint fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+
+                                <select class="form-control" formControlName="tipoId" [(ngModel)]="usuario.tipoId"
+                                    [ngClass]="{ 'is-invalid': submitted && f.tipoId.errors }" name="tipoUsuario"
+                                    id="tipoUsuario" >
+                                    <option value="" selected>--Seleccione--</option>
+                                    <option value="CÉDULA DE CIUDADANÍA">Cédula de ciudadanía</option>
+                                    <option value="CÉDILA DE EXTRANJERÍA">Cédula de extranjería</option>
+                                    <option value="PASAPORTE">Pasaporte</option>
+                                    <option value="REGISTRO CIVIL">Registro civil</option>
+                                    <option value="TARGETA DE IDENTIDAD">Tarjeta de Identidad</option>
+                                </select>
+                                <div *ngIf="submitted && f.tipoId.errors" class="invalid-feedback">
+                                    <div *ngIf="f.tipoId.errors.required">El campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="identificacion">Número de identificación: *</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-fingerprint fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <input class="form-control" formControlName="id" [(ngModel)]="usuario.id"
+                                    [ngClass]="{ 'is-invalid': submitted && f.id.errors }"
+                                    placeholder="Número de identificación" type="text" name="identificacion" id="id"
+                                    size="25" maxlength="11" value="">
+                                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.id.errors.required">El campo es obligatorio</div>
+                                    <div *ngIf="f.id.errors.pattern">Solo numeros</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group has-error">
+                            <label for="email">Correo electrónico:*</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <input class="form-control" formControlName="correo" [(ngModel)]="usuario.correo"
+                                    [ngClass]="{ 'is-invalid': submitted && f.correo.errors }"
+                                    placeholder="Correo Electrónico" type="text" name="email" id="email" size="25"
+                                    maxlength="50" value="" aria-required="true" aria-invalid="true"
+                                    style="cursor: pointer;">
+                                <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                                    <div *ngIf="f.correo.errors.required">El campo es obligatorio</div>
+                                    <div *ngIf="f.correo.errors.email">Correo inválido, (por ejemplo,
+                                        nombre@ejemplo.com).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="celular">Celular:</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-phone fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <input class="form-control" formControlName="celular" [(ngModel)]="usuario.celular"
+                                    [ngClass]="{ 'is-invalid': submitted && f.celular.errors }" placeholder="Celular"
+                                    type="text" name="celular" id="celular" size="25" maxlength="10" value="">
+                                <div *ngIf="submitted && f.celular.errors" class="invalid-feedback">
+                                    <div *ngIf="f.celular.errors.required">El campo es obligatorio</div>
+                                    <div *ngIf="f.celular.errors.pattern">Solo numeros</div>
+                                    <div *ngIf="f.celular.errors.minlength">El celular debe tener minimo 10 numeros
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Sexo:*</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-venus-mars fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <select class="form-control" formControlName="sexo" [(ngModel)]="usuario.sexo"
+                                    [ngClass]="{ 'is-invalid': submitted && f.sexo.errors }" name="sexo" id="sexo">
+                                    <option value="" selected>--Seleccione--</option>
+                                    <option value="MASCULINO">Masculino</option>
+                                    <option value="FEMENINO">Femenino</option>
+                                    <option value="INDETERMINADO ">Indeterminado </option>
+                                </select>
+                                <div *ngIf="submitted && f.sexo.errors" class="invalid-feedback">
+                                    <div *ngIf="f.sexo.errors.required">El campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Fecha de Nacimiento:*</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar fa-1x"
+                                            style="color: cornflowerblue"></i></span>
+                                </div>
+                                <input class="form-control" formControlName="fechaNacimiento"
+                                    [(ngModel)]="usuario.fechaNacimiento"
+                                    [ngClass]="{ 'is-invalid': submitted && f.fechaNacimiento.errors }"
+                                    placeholder="fecha de Nacimiento" type="date" name="fechaNacimiento"
+                                    id="fechaNacimiento" size="25" maxlength="100" value="" style="cursor: pointer;">
+                                <div *ngIf="submitted && f.fechaNacimiento.errors" class="invalid-feedback">
+                                    <div *ngIf="f.fechaNacimiento.errors.required">El campo es obligatorio</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Política de Privacidad de Datos:&nbsp;*</label>
+                            <div>
+                                <div class="form-group"><label for="terminos1">Conozco y Acepto la Política de
+                                        Privacidad de
+                                        Datos <a target="_blank"
+                                            href="https://cesar.gov.co/d/filesmain/transparencia/politica_proteccion_datos_personales.pdf#view=fitH">politica</a></label>
+                                    <div class="col-md-8">
+                                        <input type="checkbox" formControlName="checkbox"
+                                            [ngClass]="{ 'is-invalid': submitted && f.checkbox.errors }"
+                                            class="valCheckbox" name="terminos[]" id="terminos1">
+                                        <div *ngIf="submitted && f.checkbox.errors" class="invalid-feedback">
+                                            <div *ngIf="f.checkbox.errors.required">Acepte terminos</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="input-group mb-3">
+                                <div class="form-group center" style="width:100%; height:100%">
+                                    <button (click)="update()" class="btn btn-primary" style='width:120px'>Actualizar</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button (click)="delete()" class="btn btn-secundary" style='width:120px'>Eliminar</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button (click)="cancelar()" class="btn btn-primary" style='width:120px'>Atras</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+</body>
+
+</html>

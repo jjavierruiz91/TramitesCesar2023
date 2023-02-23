@@ -1,0 +1,43 @@
+/*!
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+ .input-group-prepend, .input-group-append {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.btn-block {
+    display: block;
+    width: 49%;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0076b0;
+    border-color: #0076b0;
+}
+
+.btn-secundary {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.txt-titulo {
+    color: #0076b0;
+    border-color: #0076b0;
+    text-align: center;
+    font-weight:bold;
+}
+.icon-cuadros {
+    color: #0b3b5f;
+    border-color: #0b3b5f;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}

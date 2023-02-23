@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- utilizara la ultima version de html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <title>Menu</title> -->
+</head>
+
+<body>
+
+    <div style="background: #005dca;height: 40px;top: -10px;">
+        <div class="container container--default" style="width:200px; float:left;">
+            <a style="margin-left: 60px;height: 40px;width: 119px;overflow: hidden;display: block;"
+                href="https://www.gov.co/" target="_blank">
+                <img id="gov_co_logo" style="height: 40px;width: 100px;" alt="" src="assets/Imagenes/logoCol.svg">
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand mt-2 mt-lg-0" href="#Logo">
+                    <img src="assets/Imagenes/logo_depto_big.png" height="45" alt="" loading="lazy" />
+                </a>
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="InicioAsuntosInternos">Inicio</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="Tramites">Trámites</a>
+                    </li> -->
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+
+                <!-- Notifications -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="tool-login">
+                        <div class="bloqueZona1  tipoDisplay">
+                            <div class="nxBlock nxBlock2035 nxBlockDesign1 nxBlockInformacionUsuario  row">
+                                <ul class="nav navbar-nav megamenu">
+                                    <li class="dropdown dropdown-accordion open" data-accordion="#accordion">
+                                        <a data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="true" class="dropdown-toggle">
+                                            <span class="fa fa-user"></span>
+                                            <!-- <img style="width: 32px" src="assets/Imagenes/person_90382.svg"
+                                                class="img-circle"> -->
+                                            {{nom}}{{espacio}}{{apelli}}
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <!-- <a href="">
+                                                    <span class="fa fa-cog"></span> Mi cuenta
+                                                </a> -->
+                                                <a (click)="DatosPersonales()">
+                                                    <span class="fa fa-cog"></span> Mi cuenta
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a (click)="CambiarCLave()">
+                                                    <span class="fa fa-unlock"></span> Cambiar contraseña
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a (click)="onLogout()">
+                                                    <span class="fa fa-power-off"></span> Cerrar sesión
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+</body>
+
+</html>

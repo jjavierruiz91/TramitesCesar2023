@@ -1,0 +1,90 @@
+<app-menusesion></app-menusesion>
+<!DOCTYPE html>
+<!-- utilizara la ultima version de html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Restablecer Clave</title>
+</head>
+
+<body>
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-sm-8 rounded mx-auto bg-white">
+                <br>
+                <div class="form-group mb-3">
+                    <!-- Colocar margin top -->
+                    <img alt="" src="assets/Imagenes/lohacemos.png" width="100%">
+                </div>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+
+                    <div class="">
+                        <h3 class="container1"><strong>
+                                <span style="font-size:22px">Restablecer la contraseña</span>
+                            </strong></h3>
+
+                        <p><span style="font-size:18px">¡Es hora de renovarse! Crea una nueva contraseña secreta </span></p>
+
+                    </div>
+                    <div class="form-group valid">
+                        <label for="passwd">Nueva Contraseña:*</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key fa-1x"
+                                        style="color: cornflowerblue"></i></span>
+                            </div>
+                            <input class="form-control" formControlName="password"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Nueva Contraseña"
+                                type="password" name="passwd" id="passwd" size="25" value="" aria-required="true"
+                                aria-invalid="false" aria-autocomplete="list" oldautocomplete="remove"
+                                autocomplete="off" style="cursor: pointer;">
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">El campo es obligatorio</div>
+                                <div *ngIf="f.password.errors.pattern">Contraseña débil, minimo 8 caracteres</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reppasswd">Confirmar Contraseña:*</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key fa-1x"
+                                        style="color: cornflowerblue"></i></span>
+                            </div>
+                            <input class="form-control" formControlName="confirmacionClave"
+                                [ngClass]="{ 'is-invalid': submitted && f.confirmacionClave.errors }"
+                                placeholder="Confirmar Contraseña" type="password" name="reppasswd" id="reppasswd"
+                                size="25" value="" style="cursor: pointer;" oldautocomplete="remove" autocomplete="off">
+                            <div *ngIf="submitted && f.confirmacionClave.errors" class="invalid-feedback">
+                                <div *ngIf="f.confirmacionClave.errors.required">El campo es obligatorio</div>
+                                <div *ngIf="f.confirmacionClave.errors.mustMatch">La contraseña debe ser la misma </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px" class="form-group">
+                        <div class="input-group mb-3">
+                            <input type="submit" name="ButtonLogin" value="Continuar" id="ButtonLogin"
+                                class="btn btn-block btn-primary">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="reset" (click)="goBack()" name="ButtonLogin" value="Cancelar" id="ButtonLogin"
+                                class="btn btn-block btn-secundary">
+                        </div>
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+</body>
+
+</html>

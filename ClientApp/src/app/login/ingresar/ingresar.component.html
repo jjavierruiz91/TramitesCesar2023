@@ -1,0 +1,103 @@
+<app-menu></app-menu>
+<!DOCTYPE html>
+<!-- utilizara la ultima version de html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ingresar</title>
+</head>
+
+<body>
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-8 rounded mx-auto bg-white">
+                <br>
+                <div class="form-group mb-3">
+                    <!-- Colocar margin top -->
+                    <img alt="" src="assets/Imagenes/lohacemos.png" width="100%">
+                </div>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+
+                    <div class="input-group mb-3">
+                        <!-- icono -->
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope fa-1x"
+                                    style="color: cornflowerblue"></i></span>
+                        </div>
+
+                        <input class="form-control" formControlName="correo"
+                            [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" placeholder="Correo Electrónico"
+                            type="text" name="correo" id="correo" size="25" maxlength="50" value="" aria-required="true"
+                            aria-invalid="true" style="cursor: pointer;">
+                        <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                            <div *ngIf="f.correo.errors.required">El campo es obligatorio</div>
+                            <div *ngIf="f.correo.errors.email">Correo inválido, (por ejemplo, nombre@ejemplo.com).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key fa-1x"
+                                    style="color: cornflowerblue"></i>
+                            </span>
+                        </div>
+                        <input class="form-control" formControlName="password"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Contraseña"
+                            type="password" name="passwd" id="passwd" size="25" value="" aria-required="true"
+                            aria-invalid="false" aria-autocomplete="list" oldautocomplete="remove" autocomplete="off"
+                            style="cursor: pointer;">
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">El campo es obligatorio</div>
+                            <div *ngIf="f.password.errors.pattern">Contraseña débil, minimo 8 caracteres</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px" class="form-group">
+                        <!-- Button -->
+                        <div class="input-group mb-3">
+                            <input type="submit" name="ButtonLogin" value="Ingresar" id="ButtonLogin"
+                                class="btn btn-block btn-primary">
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <a class="btn btn-dark btn-block" href="login/identify">¿Olvidó su contraseña?</a>
+                    </div>
+                    <br>
+                    <div class="input-group mb-1">
+                        <span id="Label5" class="mx-auto">¿No tienes cuenta?, <a class="mx-auto"
+                                href="Registrarse">Registrate</a></span>
+
+                    </div>
+                    <br>
+                    <br>
+                </form>
+
+            </div>
+            <div class="col-md-7 ">
+                <section class=" col-sm-8 ">
+                    <div class="container1">
+                        <h3><strong>
+                                <span style="font-size:22px">¡Bienvenidos a la Sede
+                                    Electrónica de tramites de la Gobernación del
+                                    Cesar!</span>
+                            </strong></h3>
+
+                        <p><span style="font-size:18px">Te invitamos a registrarte y así
+                                poder disfrutar de un sin número de beneficios que
+                                tenemos preparados para tí.</span></p>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+</body>
+</html>

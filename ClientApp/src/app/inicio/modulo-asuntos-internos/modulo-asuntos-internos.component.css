@@ -1,0 +1,111 @@
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+}
+.bg-datosPersonales {
+    background-color: #17a2b8 !important;
+}
+.bg-solicitud {
+    background-color: #28a745 !important;
+}
+.bg-reportes
+{
+    background-color:darkorange !important;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.o-hidden {
+    overflow: hidden !important;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.fa, .fas, .far, .fal, .fad, .fab {
+    -moz-osx-font-smoothing: none;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.card-body-icon {
+    position: absolute;
+    z-index: 0;
+    top: -25px;
+    right: -25px;
+    font-size: 5rem;
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+.p-2 {
+    padding: 0.5rem !important;
+}
+.border-info {
+    border-color: #5b7cb6 !important;
+}
+.text-info {
+    color: #5b7cb6 !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.border-left {
+    border-left: 1px solid #dee2e6 !important;
+}
+.border-info {
+    border-color: #5b7cb6 !important;
+}
+.titulo_banner {
+    margin-top: 5px;
+    font-size: 19pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #5b7cb6;
+}
+.float-left {
+    float: left !important;
+}
+.float-right {
+    float: right !important;
+}
+.row {
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.card-body {
+    
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.h-100 {
+    height: 100% !important;
+}
+.z-1 {
+    z-index: 1;
+}
+div {
+    display: block;
+}
+.mr-5, .mx-5 {
+    margin-right: 3rem !important;
+}

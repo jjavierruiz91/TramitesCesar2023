@@ -1,0 +1,87 @@
+<app-menu></app-menu>
+<!-- <app-menusesion></app-menusesion> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tramites</title>
+</head>
+
+<body>
+  <div class="col-xs-12  col-md-12 col-lg-12 col-xl-12">
+    <div class="resultadosBusqueda">
+
+      <div class="row">
+        <div class="titulo-de-tramites">
+          <p class="tramites">Inicio Trámites </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="box">
+              <div class="container-1">
+                <span class="icon"><i class="fa fa-search fa-6"></i></span>
+                <input type="search" id="search" [(ngModel)]="filterPost" placeholder="Buscar Tramite..." />
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <select class="form-select" (change)="selectSectorial($event.target.value)">
+              <option disabled selected>Seleccionar una sectorial</option>
+              <option value="">Ver todos los tramites</option>
+              <option *ngFor="let sectorial of sectoriales" [value]="sectorial" >{{sectorial}}</option>
+            </select>
+
+          </div>
+        </div>
+        <div class="contenedor-tramites-g col-xl-12">
+          <div class="contenedor-tramites">
+
+            <tr *ngFor="let tramite of listaTramites | filtroTramites:filterPost" class="row mt-4">
+
+              <div class="contenedor-tramite col-lg-9">
+                <span class="titulo-entidad-detalle">
+                  <a class="mx-auto " href="{{tramite.url}}vista1">
+                    <h3 class="titulo-tramite">{{tramite.nombre}}
+                    </h3>
+                  </a>
+                </span>
+                <div class="contendor-descripcion mt-2">{{tramite.descripcion}}
+                </div>
+                <span class="titulo-entidad">Realizar Tramite:<a href="Ingresar">
+                    <span class="titulo-entidad-detalle">Click aquí</span>
+                  </a>
+                </span>
+              </div>
+              <div class="col info-tramite align-self-end">
+
+                <div class="col">
+                  <span class="ico-tramite-linea">
+                    <span class="text-tramites-linea m-4">{{tramite.modalidad}}</span>
+                  </span>
+                </div>
+
+                <div class="col">
+                  <span class="ico-tramite-con-costo">
+                    <span class="text-tramites m-4">{{tramite.costo}}</span>
+                  </span>
+                </div>
+
+                <div class="col">
+                  <span class="ico-tiempo">
+                    <span class="text-tramites m-4">Duración {{tramite.duracion}} días
+                      hábiles</span>
+                  </span>
+                </div>
+
+              </div>
+            </tr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
